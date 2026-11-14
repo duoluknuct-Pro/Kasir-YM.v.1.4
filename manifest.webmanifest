@@ -1,0 +1,9 @@
+{
+  "name":"YANG MULIA • Batagor & Siomay",
+  "short_name":"YANG MULIA POS",
+  "start_url":"./index.html",
+  "display":"standalone",
+  "background_color":"#f5f6f8",
+  "theme_color":"#0b0b0b",
+  "icons":[{"src":"logo.jpg","sizes":"512x512","type":"image/jpeg"}]
+}
