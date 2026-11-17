@@ -1,0 +1,14 @@
+{
+  "name": "YANG MULIA POS",
+  "short_name": "YANG MULIA",
+  "description": "Kasir & Manajemen Stok Batagor dan Siomay Ikan",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#D89B18",
+  "orientation": "any",
+  "icons": [
+    {"src":"./assets/logo.jpg","sizes":"640x640","type":"image/jpeg","purpose":"any maskable"}
+  ]
+}

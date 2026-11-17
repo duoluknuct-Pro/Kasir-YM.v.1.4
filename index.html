@@ -1,75 +1,19 @@
 <!doctype html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#0b0b0b">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="logo.jpg">
-  <title>YANG MULIA • Batagor & Siomay</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#D89B18" />
+  <meta name="description" content="YANG MULIA POS - Kasir & Manajemen Stok Batagor dan Siomay Ikan" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./assets/logo.jpg" />
+  <link rel="stylesheet" href="./styles/main.css" />
+  <title>YANG MULIA POS</title>
 </head>
 <body>
-<div id="app">
-  <header class="topbar">
-    <div class="brand">
-      <img src="logo.jpg" alt="YANG MULIA">
-      <div><b>YANG MULIA</b><span>Batagor & Siomay</span></div>
-    </div>
-    <div class="sync"><span id="syncDot" class="dot green"></span><span id="syncText">Tersinkron</span></div>
-    <div class="top-actions">
-      <button class="icon-btn" id="btnKitchen">🍳 Dapur</button>
-      <button class="icon-btn" id="btnReports">📊 Laporan</button>
-      <button class="icon-btn" id="btnSettings">⚙️ Pengaturan</button>
-    </div>
-  </header>
-
-  <main class="layout">
-    <section class="catalog">
-      <div class="page-head">
-        <div>
-          <h1>Kasir</h1>
-          <p id="dateNow"></p>
-        </div>
-        <div class="search"><span>⌕</span><input id="search" placeholder="Cari menu..."></div>
-      </div>
-      <div class="chips" id="categoryChips"></div>
-      <div id="productGrid" class="product-grid"></div>
-    </section>
-
-    <aside class="cart">
-      <div class="cart-head">
-        <div><h2>Pesanan</h2><small id="orderMeta">Order baru</small></div>
-        <button class="ghost" id="btnClear">Kosongkan</button>
-      </div>
-      <div id="cartItems" class="cart-items"></div>
-      <div class="cart-bottom">
-        <div class="upsell" id="upsellBox"></div>
-        <div class="totals">
-          <div><span>Subtotal</span><b id="subtotal">Rp0</b></div>
-          <div><span>Diskon</span><b id="discount">Rp0</b></div>
-          <div class="grand"><span>Total</span><b id="total">Rp0</b></div>
-        </div>
-        <div class="order-row">
-          <select id="orderType"><option value="DINE_IN">Makan di tempat</option><option value="TAKEAWAY">Takeaway</option><option value="GOFOOD">GoFood</option><option value="GRABFOOD">GrabFood</option><option value="SHOPEEFOOD">ShopeeFood</option></select>
-          <input id="tableNo" placeholder="Meja / nama">
-        </div>
-        <div class="pay-grid">
-          <button data-pay="CASH">💵 Tunai</button>
-          <button data-pay="QRIS">▣ QRIS</button>
-          <button data-pay="ONLINE">🌐 Online</button>
-        </div>
-        <button class="pay-main" id="btnPay">Bayar <span id="payTotal">Rp0</span></button>
-        <button class="hold-btn" id="btnHold">⏸ Simpan / Hold Order</button>
-      </div>
-    </aside>
-  </main>
-</div>
-
-<div class="modal hidden" id="modal">
-  <div class="modal-card" id="modalContent"></div>
-</div>
-
-<script src="config.js"></script><script src="app.js"></script>
+  <div id="app"></div>
+  <div id="toast-root"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" src="./src/app.js"></script>
 </body>
 </html>
